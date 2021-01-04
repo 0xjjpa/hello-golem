@@ -9,25 +9,18 @@ import util from 'util'
 
   const readFileSync = util.promisify(fs.readFileSync)
 
-  const argv = yargs(process.argv)
-    .option('input', {
-      type: 'string',
-      default: 'digits.txt'
-    })
-    .option('output', {
-      type: 'string',
-      default: 'values.json'
-    })
+  const argv = yargs(process.argv.slice(2))
+    .demandCommand(2)
     .argv
 
-  const { input, output } = argv
+  const [ input, output ] = argv._
 
-  const digits = await fs.readFileSync(path.join(__dirname, input), 'utf-8')
+  const digits = fs.existsSync(input as fs.PathLike) ? await fs.readFileSync(input, 'utf-8')
     .split('\n')
-    .filter(Boolean);
+    .filter(Boolean) : ['1', '45', '90']
 
   const multipliedDigits = digits.map(digit => +digit * 2);
 
-  await fs.writeFileSync(path.join(__dirname, output), JSON.stringify(multipliedDigits));
+  await fs.writeFileSync(output, JSON.stringify(multipliedDigits));
 
 })()
