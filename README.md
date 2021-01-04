@@ -25,7 +25,7 @@ A TypeScript hello world introduction to the Golem Network using a custom Docker
 
 ## Running task locally
 
-`npm run start`
+`npm run start src/digits.txt src/values.json`
 
 ## Build task locally
 
@@ -33,7 +33,7 @@ A TypeScript hello world introduction to the Golem Network using a custom Docker
 
 ## Running task (prod) locally
 
-`npm run start:prod`
+`npm run start:prod src/digits.txt dist/values.json`
 
 ## Running task (docker) locally
 
