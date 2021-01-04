@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
+    "build": "tsc",
+    "start": "ts-node src/run.ts"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,12 @@
   },
   "homepage": "https://github.com/jjperezaguinaga/hello-golem#readme",
   "devDependencies": {
+    "@types/yargs": "^15.0.12",
+    "ts-node": "^9.1.1",
     "typescript": "^4.1.3"
+  },
+  "dependencies": {
+    "yajsapi": "^0.2.1",
+    "yargs": "^16.2.0"
   }
 }
