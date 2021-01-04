@@ -41,7 +41,7 @@ A TypeScript hello world introduction to the Golem Network using a custom Docker
 docker run \
   -v $(pwd)/src:/hello-golem/resource \
   -v $(pwd)/dist:/hello-golem/output \
-  --entrypoint /usr/local/bin/node \
+  --entrypoint /usr/local/bin/node \˜
   hello-golem:latest /hello-golem/work/dist/task.js /hello-golem/resource/digits.txt /hello-golem/output/output.json
 ```
 
@@ -51,6 +51,8 @@ docker run \
 
 # changelog
 
+04.01.2021 - Latest image at `045d5c974768d61da9720fa362ea0b7b1db47cac4d1728b4cdcc82bb`, reorganized volumes
+04.01.2021 - Latest image at `4f101360922ee7c9fb1c865a38a98341d73eef35faa638604a765523`, including `hello.ts`
 04.01.2021 - Latest image at `190f6597b32e3cc604a8748ba4794ea9e84be8b900f869bc397ae7e4`
 
 # TODO
