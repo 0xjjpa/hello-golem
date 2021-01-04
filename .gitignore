@@ -105,3 +105,9 @@ dist
 
 # data
 data
+
+# gvmi
+*.gvmi
+
+# output
+values-*.json

@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "start": "ts-node src/run.ts",
-    "start:prod": "node dist/run.js"
+    "start:prod": "node dist/run.js",
+    "golem": "ts-node golem.ts"
   },
   "repository": {
     "type": "git",

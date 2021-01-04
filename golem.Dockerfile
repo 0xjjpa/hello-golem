@@ -23,4 +23,5 @@ COPY --from=builder "/hello-golem/work/dist/" "/hello-golem/work/dist/"
 COPY --from=builder "/hello-golem/work/node_modules/" "/hello-golem/work/node_modules/"
 COPY --from=builder "/hello-golem/work/package.json" "/hello-golem/work/package.json"
 
-ENTRYPOINT ["npm", "run", "start:prod"]
+# Temporarily disabling entrypoint to test golem setup.
+# ENTRYPOINT ["npm", "run", "start:prod"]
